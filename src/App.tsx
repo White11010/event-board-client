@@ -1,21 +1,12 @@
-import './App.css'
-import {EbButton} from "./shared/ui/eb-button";
+import {AuthForms} from "./widgets/auth-forms";
+import classes from './App.module.scss'
 
 function App() {
-  const onFirstButtonClick = () => {
-    console.log(1)
-  }
-  const onSecondButtonClick = () => {
-    console.log(2)
-  }
 
   return (
-    <>
-      <div>
-        <EbButton onClick={onFirstButtonClick}>Test</EbButton>
-        <EbButton onClick={onSecondButtonClick} type={"secondary"}>Test 2</EbButton>
-      </div>
-    </>
+    <div className={classes.app}>
+      <AuthForms />
+    </div>
   )
 }
 

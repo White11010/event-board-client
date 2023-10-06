@@ -1,6 +1,12 @@
 .eb-button {
   border-radius: 15px;
   border: none;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white-color;
+  font-size: 1.125rem;
   &:hover {
     transition: box-shadow ease-out .1s;
   }

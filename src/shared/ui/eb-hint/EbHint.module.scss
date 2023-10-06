@@ -1,0 +1,44 @@
+.eb-hint {
+  width: 20px;
+  height: 20px;
+  position: relative;
+
+  &:hover {
+    .content {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.icon {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50%;
+  background-color: $dark-grey-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  color: white;
+  user-select: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.content {
+  z-index: 1;
+  text-align: left;
+  width: 220px;
+  padding: 10px;
+  transition: opacity ease-out .3s;
+  opacity: 0;
+  visibility: hidden;
+  bottom: calc(100% - 10px);
+  left: 10px;
+  position: absolute;
+  background-color: $dark-grey-color;
+  border-radius: 15px;
+  color: white;
+  user-select: none;
+  cursor: default;
+}

@@ -1,0 +1,47 @@
+.auth-forms {
+  width: 450px;
+}
+.container {
+  border-radius: 28px;
+  background-color: $medium-gray-color;
+  box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+}
+
+.current-form-container {
+  padding: 44px 36px 36px 36px;
+  background-color: $white-color;
+}
+.current-form-container--left-active {
+  border-radius: 0 28px 28px 28px;
+}
+.current-form-container--right-active {
+  border-radius: 28px 0 28px 28px;
+}
+.header {
+  display: flex;
+}
+.tab {
+  padding: 14px 0;
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab--active {
+  background-color: $white-color;
+  border-radius: 28px 28px 0 0;
+}
+.tab-text {
+  color: $placeholder-color;
+  font-size: 1.5rem;
+}
+.forgot-password {
+  text-align: center;
+  margin-top: 36px;
+  font-size: 1.125rem;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}

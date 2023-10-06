@@ -14,5 +14,5 @@ export default defineConfig({
       localsConvention: 'camelCase'
     }
   },
-
+  base: "/event-board-client"
 })

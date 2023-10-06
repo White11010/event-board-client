@@ -1,0 +1,29 @@
+.eb-input {
+  flex: 1;
+  font-size: 1.125rem;
+  color: $input-text-color;
+  &::placeholder {
+    color: $placeholder-color;
+  }
+}
+.container {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-color: $background-color;
+  padding: 10px 15px;
+  position: relative;
+}
+.icon {
+  margin: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.hint-icon {
+  position: absolute;
+  right: -10px;
+}
