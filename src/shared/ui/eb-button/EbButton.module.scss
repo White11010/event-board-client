@@ -1,0 +1,23 @@
+.eb-button {
+  border-radius: 15px;
+  border: none;
+  &:hover {
+    transition: box-shadow ease-out .1s;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    &:hover {
+      box-shadow: 0 4px 15px 0 rgba($primary-color, 0.2);
+    }
+  }
+  &--secondary {
+    background-color: $secondary-color;
+    &:hover {
+      box-shadow: 0 4px 15px 0 rgba($secondary-color, 0.2);
+    }
+  }
+}
