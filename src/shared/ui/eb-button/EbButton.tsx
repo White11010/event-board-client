@@ -8,12 +8,12 @@ type EbButtonProps = {
   children: ReactNode,
   variant?: 'primary' | 'secondary',
   type?: 'button' | 'submit',
-  onClick: MouseEventHandler<HTMLButtonElement>
+  onClick?: MouseEventHandler<HTMLButtonElement>
 }
 
 export function EbButton({
   children,
-  onClick,
+  onClick = () => {},
   variant = 'primary',
   type = 'button'
 }: EbButtonProps) {

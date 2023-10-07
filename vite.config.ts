@@ -11,7 +11,7 @@ export default defineConfig({
       },
     },
     modules: {
-      localsConvention: 'camelCase'
+      localsConvention: 'dashes'
     }
   },
   base: '/event-board-client'

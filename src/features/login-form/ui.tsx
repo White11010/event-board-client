@@ -4,8 +4,16 @@ import { EbInput } from '../../shared/ui/eb-input';
 import { EbButton } from '../../shared/ui/eb-button';
 
 import classes from './ui.module.scss';
+import { useForm } from 'react-hook-form';
 
 export function LoginForm () {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm<LoginFormState>();
+  
   const [loginData, setLoginData] = useState<LoginFormState>({
     login: '',
     password: '',
@@ -20,16 +28,36 @@ export function LoginForm () {
       return { ...prevState, password: password };
     });
   };
-  const onSubmitButtonClick = () => {
-
+  const onSubmit = (loginForm: LoginFormState) => {
+    console.log (loginForm);
+    reset();
   };
 
-  return <form className={classes.loginForm}>
-    <EbInput value={loginData.login} onInput={onLoginInput} placeholder={'Логин'} />
-    <EbInput value={loginData.password} onInput={onPasswordInput} type={'password'} placeholder={'Пароль'} hintText={'Просто показать, что есть рабочие хинты (тултипы) ((всплывашки))'}/>
-    <div>
-
-    </div>
-    <EbButton variant={'secondary'} type={'submit'} onClick={onSubmitButtonClick}>Войти</EbButton>
+  return <form className={classes.loginForm} onSubmit={handleSubmit(onSubmit)}>
+    <EbInput
+      value={loginData.login}
+      register={register}
+      name='login'
+      error={errors && errors.login?.type === 'required' ? (errors.login?.message as string) : null}
+      validationSchema={{
+        required: 'Это поле обязательно для заполнения!',
+      }}
+      onInput={onLoginInput}
+      placeholder={'Логин'}
+    />
+    <EbInput
+      value={loginData.password}
+      register={register}
+      name='password'
+      error={errors && errors.password?.type === 'required' ? (errors.password?.message as string) : null}
+      validationSchema={{
+        required: 'Это поле обязательно для заполнения!',
+      }}
+      onInput={onPasswordInput}
+      type={'password'}
+      placeholder={'Пароль'}
+      hintText={'Просто показать, что есть рабочие хинты (тултипы) ((всплывашки))'}
+    />
+    <EbButton variant={'secondary'} type={'submit'}>Войти</EbButton>
   </form>;
 }

@@ -9,8 +9,8 @@ type EbHintProps = {
 
 export function EbHint({ children }: EbHintProps) {
   return <div className={classes.ebHint}>
-    <div className={classes.icon}>?</div>
-    <div className={classes.content}>
+    <div className={classes.ebHint__icon}>?</div>
+    <div className={classes.ebHint__content}>
       {children}
     </div>
   </div>;

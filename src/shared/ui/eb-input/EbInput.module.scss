@@ -1,29 +1,47 @@
+$border-radius: 15px;
+
 .eb-input {
-  flex: 1;
-  font-size: 1.125rem;
-  color: $input-text-color;
-  &::placeholder {
-    color: $placeholder-color;
-  }
-}
-.container {
   display: flex;
-  align-items: center;
-  border-radius: 15px;
-  background-color: $background-color;
-  padding: 10px 15px;
-  position: relative;
-}
-.icon {
-  margin: 0 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  &:hover {
-    cursor: pointer;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+
+  &__input-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: $border-radius;
+    background-color: $background-color;
+    padding: 10px 15px;
+    position: relative;
   }
-}
-.hint-icon {
-  position: absolute;
-  right: -10px;
+  &__input {
+    flex: 1;
+    font-size: 1.125rem;
+    color: $input-text-color;
+    &::placeholder {
+      color: $placeholder-color;
+    }
+  }
+  &__error {
+    height: 1.125rem;
+  }
+  &__error-text {
+    margin-left: $border-radius;
+    font-size: 1.125rem;
+    color: $error-color;
+  }
+  &__password-icon {
+    margin: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__hint-icon {
+    position: absolute;
+    right: -10px;
+  }
 }
