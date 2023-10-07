@@ -1,10 +1,10 @@
-import {Input} from "@mui/base";
-import cn from "classnames";
+import { Input } from '@mui/base';
+import cn from 'classnames';
 
-import classes from './EbInput.module.scss'
-import {Visibility, VisibilityOff} from "@mui/icons-material";
-import {useState, MouseEvent, useMemo} from "react";
-import {EbHint} from "../eb-hint";
+import classes from './EbInput.module.scss';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { useState, MouseEvent, useMemo } from 'react';
+import { EbHint } from '../eb-hint';
 
 type EbInputProps = {
   value: string,
@@ -28,22 +28,22 @@ export function EbInput({
     input: {
       className: cn(classes.ebInput)
     }
-  }
+  };
 
   // Password
-  const [isVisible, setIsVisible] = useState<boolean>(false)
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const currentInputType = useMemo<typeof type>(() => {
     if (type !== 'password') {
-      return type
+      return type;
     }
-    return isVisible ? 'text' : 'password'
-  }, [type, isVisible])
+    return isVisible ? 'text' : 'password';
+  }, [type, isVisible]);
   const onClick = () => {
-    setIsVisible((prevState: boolean) => !prevState)
-  }
+    setIsVisible((prevState: boolean) => !prevState);
+  };
   const onMouseDown = (e: MouseEvent<HTMLDivElement>) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   return <Input
     slotProps={slotProps}
@@ -59,7 +59,7 @@ export function EbInput({
             onClick={onClick}
             onMouseDown={onMouseDown}
           >
-            {isVisible ? <VisibilityOff style={{color: '#999999'}}/> : <Visibility style={{color: '#999999'}}/>}
+            {isVisible ? <VisibilityOff style={{ color: '#999999' }}/> : <Visibility style={{ color: '#999999' }}/>}
           </div>
         }
         {
@@ -69,5 +69,5 @@ export function EbInput({
         }
       </>
     }
-  />
+  />;
 }

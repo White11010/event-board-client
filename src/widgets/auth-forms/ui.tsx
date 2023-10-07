@@ -1,10 +1,10 @@
-import {LoginForm} from "../../features/login-form";
-import classes from './ui.module.scss'
-import cn from "classnames";
-import {useState} from "react";
+import { LoginForm } from '../../features/login-form';
+import classes from './ui.module.scss';
+import cn from 'classnames';
+import { useState } from 'react';
 
 export function AuthForms () {
-  const [activeTab, setActiveTab] = useState<'login' | 'registration'>('login')
+  const [activeTab, setActiveTab] = useState<'login' | 'registration'>('login');
 
   return <div className={classes.authForms}>
     <div className={classes.container}>
@@ -37,5 +37,5 @@ export function AuthForms () {
       </div>
     </div>
     <p className={classes.forgotPassword}>Забыли пароль?</p>
-  </div>
+  </div>;
 }

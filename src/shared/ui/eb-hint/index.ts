@@ -1,1 +1,1 @@
-export {EbHint} from './EbHint.tsx'
+export { EbHint } from './EbHint.tsx';

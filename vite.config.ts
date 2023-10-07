@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,12 +7,12 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "src/shared/styles/index.scss" as *;`,
+        additionalData: '@use "src/shared/styles/index.scss" as *;',
       },
     },
     modules: {
       localsConvention: 'camelCase'
     }
   },
-  base: "/event-board-client"
-})
+  base: '/event-board-client'
+});

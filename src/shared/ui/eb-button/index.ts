@@ -1,1 +1,1 @@
-export { EbButton } from './EbButton.tsx'
+export { EbButton } from './EbButton.tsx';

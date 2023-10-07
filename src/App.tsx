@@ -1,5 +1,5 @@
-import {AuthForms} from "./widgets/auth-forms";
-import classes from './App.module.scss'
+import { AuthForms } from './widgets/auth-forms';
+import classes from './App.module.scss';
 
 function App() {
 
@@ -7,7 +7,7 @@ function App() {
     <div className={classes.app}>
       <AuthForms />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

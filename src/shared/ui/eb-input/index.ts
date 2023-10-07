@@ -1,1 +1,1 @@
-export {EbInput} from './EbInput.tsx'
+export { EbInput } from './EbInput.tsx';

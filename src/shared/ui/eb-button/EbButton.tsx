@@ -1,8 +1,8 @@
-import {Button} from "@mui/base";
-import {MouseEventHandler, ReactNode} from "react";
-import cn from "classnames"
+import { Button } from '@mui/base';
+import { MouseEventHandler, ReactNode } from 'react';
+import cn from 'classnames';
 
-import classes from './EbButton.module.scss'
+import classes from './EbButton.module.scss';
 
 type EbButtonProps = {
   children: ReactNode,
@@ -25,8 +25,8 @@ export function EbButton({
         variant === 'secondary' && classes.ebButtonSecondary
       )
     }
-  }
+  };
   return <Button type={type} onClick={onClick} slotProps={slotProps}>
     {children}
-  </Button>
+  </Button>;
 }
